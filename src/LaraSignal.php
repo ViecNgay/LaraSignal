@@ -90,7 +90,7 @@ class LaraSignal
                 "vi" =>  $title
             ],
             "data" => $payload,
-            "include_player_ids" => $deviceIds,
+            "included_segments" => $segments,
             "web_url" => $url['web_url'],
             "app_url" => $url['app_url'],
             "android_led_color" => "FF0000FF",
