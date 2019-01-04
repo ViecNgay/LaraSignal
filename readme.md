@@ -3,9 +3,9 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+#LaraSignal
+Working with onesignal easier!
 
 ## Installation
 
@@ -13,6 +13,30 @@ Via Composer
 
 ``` bash
 $ composer require viecngay/larasignal
+```
+Register the service provider and alias in your config/app.php:
+
+``` bash
+
+    'providers' => [
+
+        ...
+        ViecNgay\LaraSignal\LaraSignalServiceProvider::class,
+    ],
+
+
+    'aliases' => [
+        ...
+        'LaraSignal' => ViecNgay\LaraSignal\Facades\LaraSignal::class
+    ],
+```
+
+
+Config APP ID and REST API KEY in you .env file
+
+``` bash
+ONE_SIGNAL_APP_ID=Your Onesignal App Id
+ONE_SIGNAL_REST_API_KEY=Your Onesignal Rest Api Key
 ```
 
 ## Usage
