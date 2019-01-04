@@ -62,7 +62,7 @@ class LaraSignal
     public function sendToSegments($segments = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $url = [
         'web_url' => '',
         'app_url' => ''
-    ], $imageUrl = null)
+    ], $imageUrl = null, $options = [])
     {
         if (empty($title)) {
             throw new Exception("Title không được để trống");
@@ -101,7 +101,7 @@ class LaraSignal
         $data = [
             'headers' => [
                 'Authorization' => 'Basic ' . config('larasignal.one_signal_rest_api_key'),
-                'Content-Type'     => 'application/json',
+                'Content-Type' => 'application/json',
             ],
             'json' => $json
         ];
