@@ -17,23 +17,21 @@ $ composer require viecngay/larasignal
 
 ## Usage
 
-## Change log
-
-Please see the [changelog](changelog.md) for more information on what has changed recently.
-
-## Testing
-
+Send notification to segment
 ``` bash
-$ composer test
+LaraSignal::sendToSegments($segments = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $url = [], $imageUrl = null, $options = [])
 ```
+
+Send notification to Player
+``` bash
+LaraSignal::sendToDevice($deviceIds = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $url = [], $imageUrl = null, $options = [])
+```
+
 
 ## Contributing
 
 Please see [contributing.md](contributing.md) for details and a todolist.
 
-## Security
-
-If you discover any security related issues, please email quyettv.it@gmail.com instead of using the issue tracker.
 
 ## Credits
 
