@@ -8,10 +8,7 @@ class LaraSignal
 {
     private $createNotificationUrl = 'https://onesignal.com/api/v1/notifications';
 
-    public function sendToDevice($deviceIds = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $url = [
-        'web_url' => '',
-        'app_url' => ''
-    ], $imageUrl = null, $options = [])
+    public function sendToDevice($deviceIds = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $$options = [])
     {
         if (empty($title)) {
             throw new Exception("Title không được để trống");
@@ -39,11 +36,6 @@ class LaraSignal
             ],
             "data" => $payload,
             "include_player_ids" => $deviceIds,
-            "web_url" => $url['web_url'],
-            "app_url" => $url['app_url'],
-            "android_led_color" => "FF0000FF",
-            "big_picture" => $imageUrl,
-            "chrome_big_picture" => $imageUrl
         ];
         $json = array_merge($json, $options);
         $data = [
@@ -59,10 +51,7 @@ class LaraSignal
         return true;
     }
 
-    public function sendToSegments($segments = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $url = [
-        'web_url' => '',
-        'app_url' => ''
-    ], $imageUrl = null, $options = [])
+    public function sendToSegments($segments = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $options = [])
     {
         if (empty($title)) {
             throw new Exception("Title không được để trống");
@@ -91,11 +80,6 @@ class LaraSignal
             ],
             "data" => $payload,
             "included_segments" => $segments,
-            "web_url" => $url['web_url'],
-            "app_url" => $url['app_url'],
-            "android_led_color" => "FF0000FF",
-            "big_picture" => $imageUrl,
-            "chrome_big_picture" => $imageUrl
         ];
         $json = array_merge($json, $options);
         $data = [

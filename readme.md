@@ -43,14 +43,15 @@ ONE_SIGNAL_REST_API_KEY=Your Onesignal Rest Api Key
 
 Send notification to segment
 ``` bash
-LaraSignal::sendToSegments($segments = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $url = [], $imageUrl = null, $options = [])
+LaraSignal::sendToSegments($segments = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $options = [])
 ```
 
 Send notification to Player
 ``` bash
-LaraSignal::sendToDevice($deviceIds = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $url = [], $imageUrl = null, $options = [])
+LaraSignal::sendToDevice($deviceIds = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $options = [])
 ```
-
+See option list here
+https://documentation.onesignal.com/v5.0/reference
 
 ## Contributing
 
