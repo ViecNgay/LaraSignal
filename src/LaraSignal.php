@@ -8,7 +8,7 @@ class LaraSignal
 {
     private $createNotificationUrl = 'https://onesignal.com/api/v1/notifications';
 
-    public function sendToDevice($deviceIds = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $$options = [])
+    public function sendToDevice($deviceIds = [], $title = 'Title', $subTitle = 'Default Subtitle', $payload = [], $options = [])
     {
         if (empty($title)) {
             throw new Exception("Title không được để trống");
